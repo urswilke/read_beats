@@ -25,6 +25,8 @@ names(l_strudel) <- paste0("strudel_beats/", str_replace(names(l), "hs$", "txt")
 write_strudel_file <- function(x, filename) {
   strudel_vec <- c(
     "// made by using the patterns from https://github.com/lvm/tidal-drum-patterns",
+    "// (licensed under GPL-3.0 license)",
+    "// using the R script from this repository: https://github.com/urswilke/read_beats",
     "stack(",
     paste0("  ", x),
     ").s().slow(2)"
